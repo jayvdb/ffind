@@ -12,3 +12,4 @@ before_script:
 script:
   - pyflakes *.py ffind/*.py
   - python setup.py install
+  - ffind --ignore-vcs . '(?<!argparse).py$' --exec=pyflakes
