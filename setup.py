@@ -57,5 +57,5 @@ setup(
     keywords=['searching', 'file system'],
     packages=['ffind', 'ffind.backports'],
     scripts=['scripts/ffind'],
-    cmdclass={"install": ff_install},
+    # cmdclass={"install": ff_install},
 )

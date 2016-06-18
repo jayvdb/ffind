@@ -8,8 +8,10 @@ python:
   - pypy
   - pypy3
 before_script:
-  - pip install pyflakes
+  - pip install pyflakes 'tox==1.9.2' tox-travis
 script:
   - pyflakes *.py ffind/*.py
+  - tox
   - python setup.py install
   - ffind --ignore-vcs . '(?<!argparse).py$' --exec=pyflakes
+
